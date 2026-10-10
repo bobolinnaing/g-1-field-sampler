@@ -15,6 +15,7 @@ async function scoutImage(productName: string) {
     const data = await res.json();
     console.log(`Scouting ${productName}:`, data.images?.[0]?.imageUrl);
 
+    
     return (
       data.images?.[0]?.imageUrl ||
       `https://placehold.co/400x400/1a1a1a/ffffff?text=${encodeURIComponent(productName)}`
